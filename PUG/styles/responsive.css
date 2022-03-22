@@ -1,0 +1,94 @@
+
+.Desktop {
+    display: none;
+} 
+
+@media only screen and (min-width: 1024px) {
+        .encabezado{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+            margin-top: 30px;    
+        }
+        .Desktop{
+            display: inline-block;
+        }
+
+        .Mobile{
+            display: none;
+        }
+        .cent{
+            position: absolute;
+            color: orangered;
+            font-size: 50px;
+            top: 27%;
+            left: 30%;
+            font-family:'Rock Salt', cursive;
+          }
+    
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            align-content: stretch;
+            justify-content: center;
+            }
+
+
+     }
+
+     @media (max-width: 991.98px) {
+
+            .imgPulgares {display: none;}
+            
+            .cards {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            align-content: stretch;
+            justify-content: center;
+            }
+
+            .btn {
+                margin-top: 10%;
+            }
+            .cent{
+                color: orangered;
+                font-size: 30px;
+                top: 27%;
+                left: 30%;
+                font-family:'Rock Salt', cursive;
+              }
+              .encabezado{
+                display: grid;
+                grid-template-areas: "one one four"
+                                     "three three three";
+                grid-template-rows: auto auto;
+                grid-template-columns: 33% 33% 33%;
+              }
+              .one{
+                  grid-area: one;
+              }
+              .two{
+                  grid-area: two;
+              }
+              .three{
+                  grid-area: three;
+              }
+              .four{
+                  grid-area: four;
+
+              }
+      }
+
+      
+      @media (min-width: 992px) {
+        .navbar-nav{
+            padding-left: 18%;
+        }
+      }
+     
+
+  

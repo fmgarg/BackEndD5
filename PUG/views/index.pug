@@ -1,0 +1,26 @@
+doctype html
+
+html(lang='es')
+  body
+
+    nav
+     ul(class="nav")
+      li
+        a(href="/" ) Inicio
+      li
+        a(href="/productos") Productos y servicios
+
+
+    table.table.table-striped
+      tr
+        th Id
+        th Title
+        th Price
+        th Image
+
+      each n in suggestedChamps
+        tr
+          td= n.id
+          td= n.title
+          td= n.price
+          td= n.src
