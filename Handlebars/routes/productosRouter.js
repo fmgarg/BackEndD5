@@ -149,8 +149,8 @@ const items = new Contenedor ('productos.json');
 
 productosRouter.get ('/', async (req, res)=>{
     let products = await items.getAll()
-    //res.json(products)
-    fakeApi = ()=> [{title:'tijera',price: 100,src:'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',id:1},{title:'cartuchera',price:200,src:'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',id:2},{title:'mochila',price:10000,src:'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',id:3}]
+
+    fakeApi = ()=> products
 
     res.render('datos', {suggestedChamps: fakeApi(), listExists: true})
 })
@@ -166,7 +166,7 @@ productosRouter.post('/', async (req, res)=>{
   console.log(req.body)
   let newProduct = await items.save (req.body)
   //productos.push(req.body)
-  res.json({mensaje: 'se agrego correctamente '})
+  //res.json({mensaje: 'se agrego correctamente '})
 })
 
 productosRouter.put ('/:ID', async (req, res)=>{

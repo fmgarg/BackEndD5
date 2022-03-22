@@ -1,31 +1,25 @@
 {{#if listExists}}
     {{#each suggestedChamps}}
-        <div class="card">
-            <img class="card-img-top" src={{this.src}} alt="se esperaba una imagen" />
-            <div class="card-body p-4">
-                    <div class="text-center">
-                        <h3 class="fw-bolder"> {{this.title}}</h3>
-                        <div class="star d-flex justify-content-center small text-warning mb-2">
-                            <div class="bi-star-fill"></div>
-                            <div class="text-center"> <h5> Valoracion ${article.rating.rate} </h5></div>
-                            <div class="bi-star-fill"></div>
-                        </div>
-                            <h4>PRECIO: $ {{this.price}}.-</h4>
-                            <h5>(Stock disponible ${article.rating.count} unidades)</h5>
-                    </div>
-                    <div class="card-text description">
-                        <p class="text-justify">${article.description}</p>
-                    </div>
+            <div>
+                <table className="table table-responsive table-bordered">
+                    <thead>
+                    <tr className="text-primary">
+                        <th >Id</th>
+                        <th >Producto</th>
+                        <th >Precio por unidad</th>
+                        <th >Imagen</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td>{{this.id}}</td>
+                                <td>{{this.title}}</td>
+                                <td>{{this.price}}</td>
+                                <td><img src="{{this.src}}" alt="se esperaba una imagen" /></td>
+                            </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <input id="select-count-${article.id}" type="number" min="1" value="1" max="${article.rating.count}" />
-                <div class="text-center">
-                        
-                        <button id="btn-add-${article.id}" class="btn btn-outline-dark mt-auto btnAddCart">   
-                            agregar
-                        </button>
-                </div>
-            </div>
-        </div>
     {{/each}}
 {{/if}}
+
