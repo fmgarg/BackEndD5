@@ -1,0 +1,6 @@
+#INCORPORANDO MOTORES DE PLANTILLAS
+
+*4-Indica por escrito que motor de plantillas prefieres para tu proyecto: prefiero ejs porque me parece que es el que brinda mayores posibilidades de su implementacion y de crear componentes re utilizables. 
+
+
+ 
