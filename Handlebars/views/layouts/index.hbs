@@ -17,7 +17,7 @@
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!--Mi hoja de estilos-->
-    <link rel="stylesheet" type="text/css" href="/styles/common.css">
+    <!--<link rel="stylesheet" type="text/css" href="/styles/common.css">-->
 </head>
 <body class="merchandiseBody">
   <header>
@@ -29,45 +29,40 @@
           <div class="collapse navbar-collapse" id="navbarScroll">
                   <ul class="navbar-nav navbar-nav-scroll">
                       <li class="nav-item">
-                          <a class="nav-link" href="../index.html">Inicio<span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="">Acerca de nosotros<span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="../pages/merchandise.html" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                          Productos y servicios
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                          <li><a class="dropdown-item" href="../productos">Electrodomésticos</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="../productos">Bazar</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="../productos">Muebles</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="../productos">Envíos</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="../productos">Servicios</a></li>
-                          </ul>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="">Contactenos</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="" tabindex="-1" aria-disabled="true">Proveedores</a>
+                          <a class="nav-link" href="/productos">Productos<span class="sr-only">(current)</span></a>
                       </li>
                   </ul>
           </div>
     </nav> 
     </header>
-    <!--Theme ecommerce de bootstrap adaptado a mi sitio https://startbootstrap.com/template/shop-homepage-->
+    <!--shopping cart-->
    <section class="py-5">
         <div class="container-fluid">
                 <div id="contenedor-lista-productos" class="cards">
-                    {{{body}}}
+                    
                 </div>
         </div>
-  </section>
+    </section>
+
+    <section class="h-100" style="background-color: #eee;">
+            <div class="container h-100 py-5">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-10">
+
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3 class="fw-normal mb-0 text-black">Vista de productos</h3>
+                        </div>
+                                    {{{body}}}
+                                    
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
   <footer class="aboutusFooter footer"><!--bloque 4 BEM-->
     <p>Copyright © 2021
         DeTito.com™. Todos los derechos reservados.
