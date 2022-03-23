@@ -29,66 +29,53 @@
           <div class="collapse navbar-collapse" id="navbarScroll">
                   <ul class="navbar-nav navbar-nav-scroll">
                       <li class="nav-item">
-                          <a class="nav-link" href="../index.html">Inicio<span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="">Acerca de nosotros<span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="../pages/merchandise.html" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                          Productos y servicios
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                          <li><a class="dropdown-item" href="../productos">Electrodomésticos</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="../productos">Bazar</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="../productos">Muebles</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="../productos">Envíos</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="../productos">Servicios</a></li>
-                          </ul>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="">Contactenos</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="" tabindex="-1" aria-disabled="true">Proveedores</a>
+                          <a class="nav-link" href="/productos">Productos<span class="sr-only">(current)</span></a>
                       </li>
                   </ul>
           </div>
     </nav> 
     </header>
-    <!--Theme ecommerce de bootstrap adaptado a mi sitio https://startbootstrap.com/template/shop-homepage-->
-   <section class="py-5">
-        <div class="container-fluid">
-                <div id="contenedor-lista-productos" class="cards">
-                    <div>
-                        <table className="table table-responsive table-bordered">
-                            <thead>
-                                    <tr className="text-primary">
-                                        <th >Id</th>
-                                        <th >Producto</th>
-                                        <th >Precio por unidad</th>
-                                        <th >Imagen</th>
-                                    </tr>
-                            </thead>
-                            <tbody>
-                                    <tr>
-                                        <% for (let product in suggestedChamps ) {%>
-                                                <td><%= suggestedChamps[product].id%></td>
-                                                <td><%= suggestedChamps[product].title%></td>
-                                                <td><%= suggestedChamps[product].price%></td>
-                                                <td><img src="<%= suggestedChamps[product].src%>" alt="se esperaba una imagen" /></td>
-                                        <% } %>
-                                    </tr>
-                            </tbody>
-                        </table>
+    <!--Seccion de productos con EJS-->
+
+    <section class="h-100" style="background-color: #eee;">
+        <div class="container h-100 py-5">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-10">
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="fw-normal mb-0 text-black">Vista de productos</h3>
                     </div>
+                    <% for (let product in suggestedChamps ) {%>
+                            <div class="card rounded-3 mb-4">
+                                <div class="card-body p-4">
+                                    <div class="row d-flex justify-content-between align-items-center">
+                                    <div class="col-md-2 col-lg-2 col-xl-2">
+                                        <img src="<%= suggestedChamps[product].src%>" alt="se esperaba una imagen"
+                                        class="img-fluid rounded-3">
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                        <p class="lead fw-normal mb-2"><%= suggestedChamps[product].title%> (ID:<%= suggestedChamps[product].id%>)</p>
+                                    </div>
+            
+                                    <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                                        <h5 class="mb-0">$<%= suggestedChamps[product].price%></h5>
+                                    </div>
+                                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                        <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                    <% } %>           
+
                 </div>
+            </div>
         </div>
-  </section>
+    </section>
+
   <footer class="aboutusFooter footer"><!--bloque 4 BEM-->
     <p>Copyright © 2021
         DeTito.com™. Todos los derechos reservados.
