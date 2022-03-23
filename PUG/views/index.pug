@@ -2,14 +2,16 @@ doctype html
 
 html(lang='es')
   body
-
-    nav
-     ul(class="nav")
-      li
-        a(href="/" ) Inicio
-      li
-        a(href="/productos") Productos y servicios
-
+  
+    nav.navbar.navbar-expand-lg.navbar-light
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarScroll', aria-controls='navbarScroll' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+      div.collapse.navbar-collapse
+          ul.navbar-nav.navbar-nav-scroll
+            li
+              a(href="/" ) Inicio
+            li
+              a(href="/productos") Productos
 
     table.table.table-striped
       tr
@@ -23,4 +25,5 @@ html(lang='es')
           td= n.id
           td= n.title
           td= n.price
-          td= n.src
+          td
+            img(src=n.src)
